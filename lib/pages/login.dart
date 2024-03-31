@@ -63,6 +63,19 @@ class Login extends StatelessWidget {
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white,
                                 ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Please fill the email and password to login",
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleSmall
+                                ?.copyWith(
+                                  fontWeight: FontWeight.w200,
+                                  color: Colors.white,
+                                ),
                           )
                         ],
                       ),
