@@ -3,11 +3,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-import 'package:laundryapp/pages/dashboard_add.dart';
-import 'package:laundryapp/pages/dashboard_favorite.dart';
-import 'package:laundryapp/pages/dashboard_home.dart';
-import 'package:laundryapp/pages/dashboard_maps.dart';
-import 'package:laundryapp/pages/dashboard_settings.dart';
+import 'package:laundryapp/pages/dashboard_fragments/dashboard_add.dart';
+import 'package:laundryapp/pages/dashboard_fragments/dashboard_favorite.dart';
+import 'package:laundryapp/pages/dashboard_fragments/dashboard_home.dart';
+import 'package:laundryapp/pages/dashboard_fragments/dashboard_maps.dart';
+import 'package:laundryapp/pages/dashboard_fragments/dashboard_settings.dart';
 
 import '../utils/constants.dart';
 
@@ -27,6 +27,7 @@ class _DashboardState extends State<Dashboard> {
   ];
 
   int activeIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
