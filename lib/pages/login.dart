@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/constants.dart';
-import '../utils/helper.dart';
+
 import '../widgets/app_button.dart';
 import '../widgets/input_widget.dart';
 
@@ -135,7 +135,8 @@ class Login extends StatelessWidget {
                               type: ButtonType.PRIMARY,
                               text: "Log In",
                               onPressed: () {
-                                nextScreen(context, "/dashboard");
+                                // nextScreen(context, "/dashboard");
+                                Navigator.pushNamed(context, "/dashboard");
                               },
                             )
                           ],

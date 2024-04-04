@@ -8,7 +8,6 @@ import 'package:laundryapp/pages/dashboard_fragments/dashboard_favorite.dart';
 import 'package:laundryapp/pages/dashboard_fragments/dashboard_home.dart';
 import 'package:laundryapp/pages/dashboard_fragments/dashboard_maps.dart';
 import 'package:laundryapp/pages/dashboard_fragments/dashboard_settings.dart';
-
 import '../utils/constants.dart';
 
 class Dashboard extends StatefulWidget {
@@ -31,6 +30,13 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: null,
+          backgroundColor: Colors.transparent,
+          elevation: 0.0, // remove box shadow
+          iconTheme:
+              const IconThemeData(color: Colors.white), // recolor the icon
+        ),
         bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Constants.scaffoldBackgroundColor,
           buttonBackgroundColor: Constants.primaryColor,
@@ -68,6 +74,33 @@ class _DashboardState extends State<Dashboard> {
           },
         ),
         backgroundColor: Constants.primaryColor,
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Drawer Header'),
+              ),
+              ListTile(
+                title: const Text('Item 1'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+            ],
+          ),
+        ),
         body: _screens[activeIndex]);
   }
 }
